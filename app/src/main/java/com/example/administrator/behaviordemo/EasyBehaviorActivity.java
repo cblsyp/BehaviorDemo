@@ -32,6 +32,7 @@ public class EasyBehaviorActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()){
                     case MotionEvent.ACTION_MOVE:
+//                        这个是对我们别观察的人 做变化   初始点就是这里
                         v.setX(event.getRawX()-v.getWidth()/2);
                         v.setY(event.getRawY()-v.getHeight()/2);
 
@@ -51,12 +52,22 @@ public class EasyBehaviorActivity extends Activity {
 
                         break;
                 }
-                return false;
+                return false;//此时必须返回false  否则其onclick  方法不会执行  在时间分发的具体情况下面还没有搞清楚 搞清楚了会过来解释的
             }
         });
     }
 
-/*
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        return super.onTouchEvent(event);
+    }
+
+    /*
 *  Log.e(TAG,"view 的宽度,用getWidth()获取"+button.getWidth());
    Log.e(TAG,"view 的高度,用getHeight()获取"+button.getHeight())
    这个是得到view的长度和宽度  单位:像素
@@ -74,4 +85,8 @@ public class EasyBehaviorActivity extends Activity {
 * 其中getLeft() getTop()  getBottom() getRight()  getElevation()  这几个数值是不会变得 这五个值代表的是view 的初始位置
 * 这个不同于view.getX()  view.getY()  这个是会变化的 我们
 * * */
+
+/*
+* 基本所有的理解  2017.9.7  当我们在做一个项目的时候 如果碰到一个难题 会出现这种情况 不完全搞清楚还是会朱阻碍我们项目的进展  那我们必须把他全部搞懂
+* 如果明白了原因 则带过 等这个项目做好了 再过来完成这个东西  */
 }
