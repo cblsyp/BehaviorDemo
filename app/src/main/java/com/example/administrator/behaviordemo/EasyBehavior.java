@@ -23,5 +23,11 @@ public class EasyBehavior extends CoordinatorLayout.Behavior<TextView> {//这里
         return dependency instanceof Button;
     }
 
-
+    @Override
+    public boolean onDependentViewChanged(CoordinatorLayout parent, TextView child, View dependency) {
+        child.setX(dependency.getX() + 200);
+        child.setY(dependency.getY() + 200);
+        child.setText(child.getX()+"\n"+child.getY());
+        return true;
+    }
 }
