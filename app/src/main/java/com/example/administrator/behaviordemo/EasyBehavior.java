@@ -12,7 +12,7 @@ import android.widget.TextView;
  */
 
 public class EasyBehavior extends CoordinatorLayout.Behavior<TextView> {//这里的泛型 指的是观察者的veiw  child view
-
+   //必须重写代双参的构造器  因为xml反射的时候需要
     public EasyBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
@@ -22,7 +22,7 @@ public class EasyBehavior extends CoordinatorLayout.Behavior<TextView> {//这里
         //判断左边的对象是否是右边类的实例
         return dependency instanceof Button;
     }
-
+  //被观察view  也就是Button 变化的时候回调的方法
     @Override
     public boolean onDependentViewChanged(CoordinatorLayout parent, TextView child, View dependency) {
 

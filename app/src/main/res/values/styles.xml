@@ -1,11 +1,40 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">#2e8abb</item>-->
+    <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">#2e8abb</item> <!--浅蓝色-->
+        <item name="colorPrimaryDark">#3A5FCD</item> <!--深蓝色-->
+    </style>
+
+    <style name="MDTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light">
+        <!--更换ToolBar OverFlow menu icon-->
+        <item name="actionOverflowButtonStyle">@style/OverFlowIcon</item>
+        <!--设置ToolBar 溢出菜单的文字的颜色-->
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <!--设置显示在toolBar上菜单字体的颜色-->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!--设置toolbar弹出菜单字体的大小-->
+        <item name="android:textSize">15sp</item>
+
+    </style>
+
+    <style name="OverFlowIcon" parent="Widget.AppCompat.Light.ActionButton.Overflow">\
+        <item name="android:src">@drawable/abc_ic_menu_moreoverflow_mtrl_alpha</item>
+    </style>
+
 
 </resources>
