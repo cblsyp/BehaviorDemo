@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.annotation.ColorInt;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -13,6 +14,10 @@ import android.view.WindowManager;
  */
 
 public class StatusBarUtils {
+
+    public static void addStatusBarBehind(Activity activity, @ColorInt int color,int statusBarAlpha){
+
+    }
     /**
      * 为该视图的activity所属的窗口满屏
      *
