@@ -61,7 +61,6 @@ public class StausBarBiewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 View view=getWindow().getDecorView();
                 StatusBarUtils.showSystemUI(view);
-
                 toolbar.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
                     @Override
                     public void onSystemUiVisibilityChange(int visibility) {

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/StatusTheme">
-        <activity android:name=".activity.StausBarBiewActivity">
+        <activity android:name=".activity.AppbarLayoutActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,8 @@
         <activity android:name=".EasyBehaviorActivity"/>
         <activity android:name=".ToolBarActivity"/>
         <activity android:name=".activity.WindowActivity"/>
-        <activity android:name=".activity.AppbarLayoutActivity"/>
+        <activity android:name=".activity.StausBarBiewActivity"/>
+        <activity android:name=".activity.StausBarBiewActivity2"/>
     </application>
 
 </manifest>
