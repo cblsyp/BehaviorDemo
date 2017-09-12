@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/MDTheme">
-        <activity android:name=".activity.AppbarLayoutActivity">
+        android:theme="@style/StatusTheme">
+        <activity android:name=".activity.StausBarBiewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,7 @@
         <activity android:name=".EasyBehaviorActivity"/>
         <activity android:name=".ToolBarActivity"/>
         <activity android:name=".activity.WindowActivity"/>
+        <activity android:name=".activity.AppbarLayoutActivity"/>
     </application>
 
 </manifest>

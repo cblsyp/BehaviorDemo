@@ -5,11 +5,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.administrator.behaviordemo.R;
+import com.example.administrator.behaviordemo.StatusBarUtils;
 
 /**
  * Created by Administrator on 2017/9/11.
@@ -17,12 +22,28 @@ import com.example.administrator.behaviordemo.R;
 
 public class AppbarLayoutActivity extends AppCompatActivity {
 
+    private static final String TAG = AppbarLayoutActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.appbar_layout);
 
+
+/*
+* 确实可以为满屏幕  这个是可以实现的  测试通过  其实这就是单元测试*/
+     //   StatusBarUtils.setFullScreen(this);
+
         initView();
+
+        testStatusbar();
+    }
+
+    private void testStatusbar() {
+        Window window=getWindow();
+        ViewGroup  view= (ViewGroup) window.getDecorView();
+         int  count=view.getChildCount();
+        Log.e(TAG,"DecorView  count:"+count);
     }
 
     private void initView() {

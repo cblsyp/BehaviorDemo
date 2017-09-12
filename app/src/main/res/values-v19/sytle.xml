@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--android 4.4的API 对应的是19  以下属性只有在19以上才会有 所有必须新建一个values-v19  表示只针对19以上的系统-->
+<resources>
+
+    <style name="StatusTheme" parent="@style/BaseTheme">
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>
