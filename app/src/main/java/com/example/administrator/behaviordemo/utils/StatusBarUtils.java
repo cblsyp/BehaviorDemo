@@ -1,4 +1,4 @@
-package com.example.administrator.behaviordemo;
+package com.example.administrator.behaviordemo.utils;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;

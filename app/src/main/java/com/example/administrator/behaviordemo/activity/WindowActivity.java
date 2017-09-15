@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import com.android.debug.hv.ViewServer;
-import com.example.administrator.behaviordemo.StatusBarUtils;
+import com.example.administrator.behaviordemo.utils.StatusBarUtils;
 
 /**
  * Created by Administrator on 2017/9/11.

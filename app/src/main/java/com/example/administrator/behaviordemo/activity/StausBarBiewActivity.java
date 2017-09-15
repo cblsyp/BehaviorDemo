@@ -3,16 +3,14 @@ package com.example.administrator.behaviordemo.activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 
 import com.example.administrator.behaviordemo.R;
-import com.example.administrator.behaviordemo.StatusBarUtils;
+import com.example.administrator.behaviordemo.utils.StatusBarUtils;
 
 /**
  * Created by Administrator on 2017/9/12.

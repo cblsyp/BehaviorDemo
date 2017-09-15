@@ -6,12 +6,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
@@ -20,7 +18,7 @@ import android.widget.FrameLayout;
 
 import com.android.debug.hv.ViewServer;
 import com.example.administrator.behaviordemo.R;
-import com.example.administrator.behaviordemo.StatusBarUtils;
+import com.example.administrator.behaviordemo.utils.StatusBarUtils;
 
 /**
  * Created by Administrator on 2017/9/11.
