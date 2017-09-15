@@ -18,6 +18,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.android.debug.hv.ViewServer;
 import com.example.administrator.behaviordemo.R;
 import com.example.administrator.behaviordemo.StatusBarUtils;
 
@@ -34,6 +35,7 @@ public class AppbarLayoutActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.appbar_layout);
+        ViewServer.get(this).addWindow(this);
 
 
 /*
@@ -92,8 +94,6 @@ public class AppbarLayoutActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
 
     private void testwindow() {
@@ -109,5 +109,17 @@ public class AppbarLayoutActivity extends AppCompatActivity {
 
         WindowManager windowManager = getWindowManager();
         windowManager.addView(button, params);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ViewServer.get(this).removeWindow(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ViewServer.get(this).setFocusedWindow(this);
     }
 }

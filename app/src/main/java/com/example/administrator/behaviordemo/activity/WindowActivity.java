@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.android.debug.hv.ViewServer;
 import com.example.administrator.behaviordemo.StatusBarUtils;
 
 /**
@@ -23,11 +24,13 @@ public class WindowActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        ViewServer.get(this).addWindow(this);
         caculstatusbarheigh();
         testStatusbar();
         testwindow();
 
+
+        testStatusbar();
     }
 
     /**
@@ -54,21 +57,38 @@ public class WindowActivity extends AppCompatActivity {
         params.gravity= Gravity.CENTER;
 
         WindowManager windowManager=getWindowManager();
-        windowManager.addView(button,params);
+        windowManager.addView(button,params);   //这里添加了一个view  是添加到了哪里呢?
+
 
         testStatusbar();
     }
 
     /**
-     * 两次的打印结果都为一 说明只有一个contentview 吗?  有点问题
+     * 两次的打印结果都为一 说明只有一个contentview 吗?  有点问题  没有问题 整个DecorView  下面只有一个LinearLayout
+     * 如果我们不执行testwindow()这个方法  那么  状态栏是会显示出来的  因为状态栏的绘制和Activity 没有关系
+     *
+     * 也不再层级View 的范围之内   这个是很重要的一件事情  但是现在也不是很确定了
+     *
      */
     private void testStatusbar() {
         Window window=getWindow();
         ViewGroup view= (ViewGroup) window.getDecorView();
         int  count=view.getChildCount();
         Log.e(TAG,"DecorView  count:"+count);
+        Log.e(TAG,"view:"+window.getDecorView().getClass().getSimpleName());
+        Log.e(TAG,"view:"+((ViewGroup) window.getDecorView()).getChildAt(0).getClass().getSimpleName());
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ViewServer.get(this).setFocusedWindow(this);
+    }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        ViewServer.get(this).removeWindow(this);
+    }
 }

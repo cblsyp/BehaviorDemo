@@ -1,4 +1,4 @@
-package com.example.administrator.behaviordemo;
+package com.example.administrator.behaviordemo.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.administrator.behaviordemo.R;
 
 /**
  * Created by Administrator on 2017/9/7.

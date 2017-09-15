@@ -1,6 +1,5 @@
-package com.example.administrator.behaviordemo;
+package com.example.administrator.behaviordemo.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +7,14 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 
+import com.example.administrator.behaviordemo.R;
+
 /**
  * Created by Administrator on 2017/9/7.
+ * android 3.0之前使用的是标题栏 但是3.0之后到4.4  使用的是ActionBar   5.0之后则是推荐使用的是toolbar  这个是对actionbar的一种封装
+ *
+ * 一般在我们的开发中  会显示或者影藏actionbar 一般都是给activity设置主题  NoActionBar  也可以在代码中调用方法hide()  来显示和影藏actionbar  但是一般不采用这种操作 因为hide()
+ * 系统默认会将ActionBar占用的空间分配给界面，此时显示的界面将会重新绘制。当然show()  也会引起界面的重新绘制
  */
 
 public class ToolBarActivity extends AppCompatActivity implements View.OnClickListener {
