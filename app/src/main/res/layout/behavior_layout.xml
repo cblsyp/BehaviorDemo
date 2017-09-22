@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView
-        android:background="@drawable/test_shape"
-        app:layout_behavior=".EasyBehavior"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="观察者View child"
-        />
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    >
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="300px"
-        android:layout_height="150px"
-        android:layout_gravity="center"
-        android:text="被观察View dependency"
-        />
-</android.support.design.widget.CoordinatorLayout>
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="Window的应用" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="ToolBar的应用" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="状态栏的分析" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="AppBarLayout的简单应用" />
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="简书首页的模仿" />
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="behavir的简单分析" />
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="默认" />
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="默认" />
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="默认" />
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="148dp"
+        android:layout_height="wrap_content"
+        android:text="默认" />
+</LinearLayout>

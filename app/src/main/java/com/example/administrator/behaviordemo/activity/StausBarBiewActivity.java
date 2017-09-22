@@ -45,12 +45,12 @@ public class StausBarBiewActivity extends AppCompatActivity {
                 View view=getWindow().getDecorView();
                StatusBarUtils.hideSystemUI(view);
 
-                toolbar.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
-                    @Override
-                    public void onSystemUiVisibilityChange(int visibility) {
-                        toolbar.setPadding(toolbar.getPaddingLeft(),0,toolbar.getPaddingRight(),toolbar.getPaddingBottom());
-                    }
-                });
+//                toolbar.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+//                    @Override
+//                    public void onSystemUiVisibilityChange(int visibility) {
+//                        toolbar.setPadding(toolbar.getPaddingLeft(),0,toolbar.getPaddingRight(),toolbar.getPaddingBottom());
+//                    }
+//                });
             }
         });
 
@@ -59,13 +59,13 @@ public class StausBarBiewActivity extends AppCompatActivity {
             public void onClick(View v) {
                 View view=getWindow().getDecorView();
                 StatusBarUtils.showSystemUI(view);
-                toolbar.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
-                    @Override
-                    public void onSystemUiVisibilityChange(int visibility) {
-                        Log.e(TAG,"getPaddingLeft:"+toolbar.getPaddingLeft()+"\n"+"paddingTop:"+toolbar.getPaddingTop()+"\n");
-                        toolbar.setPadding(toolbar.getPaddingLeft(),StatusBarUtils.getStatusbarHeight(StausBarBiewActivity.this),toolbar.getPaddingRight(),toolbar.getPaddingBottom());
-                    }
-                });
+//                toolbar.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+//                    @Override
+//                    public void onSystemUiVisibilityChange(int visibility) {
+//                        Log.e(TAG,"getPaddingLeft:"+toolbar.getPaddingLeft()+"\n"+"paddingTop:"+toolbar.getPaddingTop()+"\n");
+//                        toolbar.setPadding(toolbar.getPaddingLeft(),StatusBarUtils.getStatusbarHeight(StausBarBiewActivity.this),toolbar.getPaddingRight(),toolbar.getPaddingBottom());
+//                    }
+//                });
             }
         });
     }
